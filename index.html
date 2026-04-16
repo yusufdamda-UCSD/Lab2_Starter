@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset = "UTF-8">
     <title>Meeting Minutes</title>
+    <link rel="icon" href="assets/diagram.jpg">
   </head>
   <body>
     <header> 
         <h1>Pomodoro Timer First Brainstorm</h1>
         <p>Brainstorming Meeting</p>
         <p>April 15, 2026</p>
+        <nav>
+            <a href="#attendance">Attendance</a><br>
+            <a href="#agenda">Agenda</a><br>
+            <a href="#unfinished-business">Unfinished Business</a><br>
+            <a href="#new-business">New Business</a><br>
+            <a href="#misc">Miscellaneous</a><br>
+            <a href="#media">Diagrams and Media</a><br>
+            <a href="#feedback-form">Feedback Form</a>
+        </nav>
     </header>
 
     <main>
-        <section>
+        <div>
+            <span>Team status:</span> First brainstorming session completed.
+        </div>
+
+        <hr>
+        
+        <section id="attendance">
             <h2>Attendance</h2>
             <h3>Present</h3>
             <ul>
@@ -25,7 +42,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="agenda">
             <h2>Agenda</h2>
             <ol>
                 <li>Discuss overview of meeting.</li>
@@ -35,13 +52,13 @@
             </ol>
         </section>
 
-        <section>
+        <section id="unfinished-business">
             <h2>Unfinished Business</h2>
             <p>This is our first meeting! No unfinished business at the moment.         
             </p>
         </section>
 
-         <section>
+        <section id="new-business">>
             <h2>New Business</h2>
             <ul>
                 <li>Create a new workflow design.</li>
@@ -50,7 +67,7 @@
                 <li>Everyone will give their input on new ideas.</li>
             </ul>   
         </section>
-        <section>
+        <section id="misc">
             <h2>Miscellaneous Comments / Questions / Concerns</h2>
 
             <p>
@@ -69,10 +86,91 @@
                 </p>
             </details>
         </section>
+        
+        <section id="media">
+          <h2>Diagrams and Media</h2>
+          <h3>Diagram</h3>
+            <img src="assets/diagram.jpg" alt="Diagram of pomodoro timer workflow" width="300">
 
+          <h3>Audio Recording</h3>
+            <audio controls>
+              <source src="assets/meeting-audio.mp3" type="audio/mpeg">
+              your browser does not support the audio element.
+            </audio>
+
+          <h3>Video Recording</h3>
+            <video controls width="300">
+              <source src="assets/meeting-video.mp4" type="video/mp4">
+              your browser does not support the audio element.
+            </video>
+        </section>
+        
+        <section id="feedback-form">
+          <h2>Feedback Form</h2>
+
+          <form>
+            <fieldset>
+              <legend>Meeting Feedback</legend>
+
+              <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" list="team-members">
+              </p>
+
+              <datalist id="team-members">
+                <option value="Yusuf"></option>
+                <option value="Reginald"></option>
+                <option value="Fernando"></option>
+                <option value="Charlie"></option>
+              </datalist>
+
+              <p>
+                <label for="meeting-date">Meeting Date:</label>
+                <input type="date" id="meeting-date" name="meeting-date">
+              </p>
+
+              <p>Which features should be included?</p>
+
+              <input type="checkbox" id="home-button" name="features" value="home-button">
+              <label for="home-button">Home Button</label>
+
+              <input type="checkbox" id="breaks" name="features" value="breaks">
+              <label for="breaks">Break Modes</label>
+
+              <input type="checkbox" id="notifications" name="features" value="notifications">
+              <label for="notifications">Notifications</label>
+
+              <p>Preferred Theme:</p>
+
+              <input type="radio" id="light" name="theme" value="light">
+              <label for="light">Light</label>
+
+              <input type="radio" id="dark" name="theme" value="dark">
+              <label for="dark">Dark</label>
+
+              <p>
+                <label for="role">Your Role:</label>
+                <select id="role" name="role">
+                  <option value="">Select one</option>
+                  <option value="developer">Developer</option>
+                  <option value="designer">Designer</option>
+                  <option value="manager">Manager</option>
+                  </select>
+              </p>
+
+              <p>
+                <label for="comments">Additional Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+              </p>
+
+              <button type="submit">Submit</button>
+            </fieldset>
+          </form>
+        </section>
     </main>
 
     <footer>
+        <p>Created for CSE110 Lab2.</p>
     </footer>
   </body>
 </html>
